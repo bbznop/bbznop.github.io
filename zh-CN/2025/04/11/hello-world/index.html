@@ -72,11 +72,8 @@
 <body class="max-width mx-auto px3 ltr">
     
       <div id="header-post">
-  <a id="menu-icon" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
-  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
-  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
-  <span id="menu">
-    <span id="nav">
+  <div class="post-navigation">
+    <nav id="nav" aria-label="目录">
       <ul>
         <!--
        --><li><a href="/zh-CN/">首页</a></li><!--
@@ -90,25 +87,26 @@
        --><li><a href="/zh-CN/about/">关于</a></li><!--
      -->
       </ul>
-    </span>
-    <br/>
-    <span id="actions">
-      <ul>
-        
-        <li><a class="icon" aria-label="上一篇" href="/zh-CN/2025/08/23/CVE-2024-21762-%E2%80%94-Reproducing-Deep-Analysis-of-the-FortiOS-Remote-Code-Execution-Vulnerability/"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
-        
-        
-        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
-        <li><a class="icon" aria-label="分享文章" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
-      </ul>
-      <span id="i-prev" class="info" style="display:none;">上一篇</span>
-      <span id="i-next" class="info" style="display:none;">下一篇</span>
-      <span id="i-top" class="info" style="display:none;">返回顶部</span>
-      <span id="i-share" class="info" style="display:none;">分享文章</span>
-    </span>
-    <br/>
-    <div id="share" style="display: none">
-      <ul>
+    </nav>
+    <details id="post-tools">
+      <summary aria-label="目录"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i></summary>
+      <div class="post-tools-panel">
+        <div id="actions">
+          <ul>
+            
+            <li><a class="icon" aria-label="上一篇" href="/zh-CN/2025/08/23/CVE-2024-21762-%E2%80%94-Reproducing-Deep-Analysis-of-the-FortiOS-Remote-Code-Execution-Vulnerability/"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+            
+            
+            <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+            <li><a class="icon" aria-label="分享文章" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+          </ul>
+          <span id="i-prev" class="info" style="display:none;">上一篇</span>
+          <span id="i-next" class="info" style="display:none;">下一篇</span>
+          <span id="i-top" class="info" style="display:none;">返回顶部</span>
+          <span id="i-share" class="info" style="display:none;">分享文章</span>
+        </div>
+        <div id="share" style="display: none">
+          <ul>
   <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://bbznop.github.io/zh-CN/2025/04/11/hello-world/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
   <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://bbznop.github.io/zh-CN/2025/04/11/hello-world/&text=Hello World!"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
   <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://bbznop.github.io/zh-CN/2025/04/11/hello-world/&title=Hello World!"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
@@ -122,10 +120,12 @@
   <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://bbznop.github.io/zh-CN/2025/04/11/hello-world/&t=Hello World!"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
 </ul>
 
-    </div>
-    
-    
-  </span>
+        </div>
+        
+        
+      </div>
+    </details>
+  </div>
 </div>
 
     
