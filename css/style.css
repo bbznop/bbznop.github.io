@@ -924,6 +924,7 @@ body {
 #footer-post #toc-footer a:hover {
   background: none;
   text-decoration: underline;
+  text-decoration-color: #d480aa;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.2em;
 }
@@ -1234,6 +1235,7 @@ article .content .caption {
 .article-toc nav a:hover {
   background: none;
   text-decoration: underline;
+  text-decoration-color: #d480aa;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.2em;
 }
