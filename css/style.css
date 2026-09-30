@@ -688,7 +688,7 @@ body {
   #header #nav ul.responsive li {
     display: block;
   }
-  #header #nav ul a[aria-label="Menu"] {
+  #header #nav ul a {
     display: inline-block;
     min-width: 48px;
     min-height: 48px;
@@ -1194,7 +1194,8 @@ article .content .caption {
   text-align: center;
   font-size: 0.9em;
 }
-.article-languages {
+.article-languages,
+.site-languages {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
@@ -1202,7 +1203,9 @@ article .content .caption {
   font-size: 0.85rem;
 }
 .article-languages a,
-.article-languages span {
+.site-languages a,
+.article-languages span,
+.site-languages span {
   display: inline-flex;
   align-items: center;
   min-height: 2.5rem;
@@ -1213,16 +1216,19 @@ article .content .caption {
   line-height: 1.5;
   text-decoration: none;
 }
-.article-languages [aria-current="page"] {
+.article-languages [aria-current="page"],
+.site-languages [aria-current="page"] {
   border-color: #2bbc8a;
   color: #2bbc8a;
   font-weight: bold;
 }
-.article-languages a:hover {
+.article-languages a:hover,
+.site-languages a:hover {
   border-color: #2bbc8a;
   color: #2bbc8a;
 }
-.article-languages a:focus-visible {
+.article-languages a:focus-visible,
+.site-languages a:focus-visible {
   outline: 2px solid #2bbc8a;
   outline-offset: 3px;
 }
