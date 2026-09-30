@@ -21,17 +21,9 @@ $(document).ready(function() {
 
 
   /**
-   * Keep site navigation available while article tools are opened separately.
+   * Keep article navigation available in either scroll direction.
    */
   if ($(".post").length) {
-    var postTools = $("#post-tools");
-    postTools.on("keydown", function(event) {
-      if (event.key === "Escape") {
-        postTools.prop("open", false);
-        postTools.find("summary").trigger("focus");
-      }
-    });
-
     /**
      * Keep the mobile navigation bar visible in either scroll direction.
      */
