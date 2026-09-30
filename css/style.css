@@ -621,6 +621,13 @@ body {
   background-size: 50px 50px;
   background-repeat: no-repeat;
 }
+#header .header-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem 1.5rem;
+  margin-left: 70px;
+}
 #header #nav {
   color: #2bbc8a;
   letter-spacing: 0.01em;
@@ -662,6 +669,14 @@ body {
   margin-right: 0;
 }
 @media screen and (max-width: 480px) {
+  #header .header-navigation {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+  #header .header-navigation .site-languages {
+    order: -1;
+  }
   #header #title {
     display: table;
     margin-right: 5rem;
@@ -688,14 +703,13 @@ body {
   #header #nav ul.responsive li {
     display: block;
   }
-  #header #nav ul a {
+  #header #nav ul li.icon a {
     display: inline-block;
     min-width: 48px;
     min-height: 48px;
   }
   #header #nav li:not(:first-child) {
     padding-top: 1rem;
-    padding-left: 70px;
     font-size: 1rem;
   }
 }
@@ -1089,9 +1103,16 @@ article header .posttitle {
   font-size: 1.5em;
   line-height: 1.25;
 }
-article header .meta {
-  margin-top: 0;
+article header .post-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem 1.5rem;
+  margin-top: 0.25rem;
   margin-bottom: 1rem;
+}
+article header .meta {
+  margin: 0;
 }
 article header .meta * {
   color: #ccc;
@@ -1194,46 +1215,9 @@ article .content .caption {
   text-align: center;
   font-size: 0.9em;
 }
-.article-languages,
-.site-languages {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin: 1rem 0 1.5rem;
-  font-size: 0.85rem;
-}
-.article-languages a,
-.site-languages a,
-.article-languages span,
-.site-languages span {
-  display: inline-flex;
-  align-items: center;
-  min-height: 2.5rem;
-  padding: 0 0.8rem;
-  border: 1px solid #908d8d;
-  border-radius: 4px;
-  background: none;
-  line-height: 1.5;
-  text-decoration: none;
-}
-.article-languages [aria-current="page"],
-.site-languages [aria-current="page"] {
-  border-color: #2bbc8a;
-  color: #2bbc8a;
-  font-weight: bold;
-}
-.article-languages a:hover,
-.site-languages a:hover {
-  border-color: #2bbc8a;
-  color: #2bbc8a;
-}
-.article-languages a:focus-visible,
-.site-languages a:focus-visible {
-  outline: 2px solid #2bbc8a;
-  outline-offset: 3px;
-}
 .article-language-note {
-  margin: -0.5rem 0 1.5rem;
+  flex-basis: 100%;
+  margin: 0;
   color: #ccc;
   font-size: 0.85rem;
 }
@@ -1265,6 +1249,73 @@ article .content .caption {
   .article-tag:before,
   .article-category:before {
     content: "|";
+  }
+}
+.language-switch,
+#header .language-switch {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  margin: 0;
+  font-size: 0.8rem;
+  letter-spacing: 0.01em;
+}
+.language-switch a,
+#header .language-switch a,
+.language-switch [aria-current],
+#header .language-switch [aria-current] {
+  position: relative;
+  display: inline-block;
+  min-height: 24px;
+  background: none;
+  line-height: 24px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.language-switch > :not(:first-child),
+#header .language-switch > :not(:first-child) {
+  margin-left: 12px;
+  padding-left: 12px;
+}
+.language-switch > :not(:first-child):before,
+#header .language-switch > :not(:first-child):before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 1em;
+  border-left: 1px dotted #2bbc8a;
+  content: "";
+  transform: translateY(-50%);
+}
+.language-switch [aria-current="page"],
+#header .language-switch [aria-current="page"] {
+  color: #c9cacc;
+  font-weight: 700;
+}
+.language-switch a,
+#header .language-switch a {
+  color: #2bbc8a;
+}
+.language-switch a:hover,
+#header .language-switch a:hover {
+  background-image: linear-gradient(transparent, transparent 5px, #2bbc8a 5px, #2bbc8a);
+  background-position: bottom;
+  background-size: 100% 6px;
+  background-repeat: repeat-x;
+}
+.language-switch a:focus-visible,
+#header .language-switch a:focus-visible {
+  outline: 2px solid #2bbc8a;
+  outline-offset: 3px;
+}
+@media (pointer: coarse) {
+  .language-switch a,
+  #header .language-switch a,
+  .language-switch [aria-current],
+  #header .language-switch [aria-current] {
+    min-width: 44px;
+    min-height: 44px;
+    line-height: 44px;
   }
 }
 #archive .post-year {
