@@ -25,9 +25,6 @@ $(document).ready(function() {
    */
   if ($(".post").length) {
     var postTools = $("#post-tools");
-    $("#header-post #toc a").on("click", function() {
-      postTools.prop("open", false);
-    });
     postTools.on("keydown", function(event) {
       if (event.key === "Escape") {
         postTools.prop("open", false);
