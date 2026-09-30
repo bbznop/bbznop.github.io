@@ -1200,6 +1200,43 @@ article .content .caption {
   text-align: center;
   font-size: 0.9em;
 }
+.article-languages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0 1.5rem;
+  font-size: 0.85rem;
+}
+.article-languages a,
+.article-languages span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.5rem;
+  padding: 0 0.8rem;
+  border: 1px solid #908d8d;
+  border-radius: 4px;
+  background: none;
+  line-height: 1.5;
+  text-decoration: none;
+}
+.article-languages [aria-current="page"] {
+  border-color: #2bbc8a;
+  color: #2bbc8a;
+  font-weight: bold;
+}
+.article-languages a:hover {
+  border-color: #2bbc8a;
+  color: #2bbc8a;
+}
+.article-languages a:focus-visible {
+  outline: 2px solid #2bbc8a;
+  outline-offset: 3px;
+}
+.article-language-note {
+  margin: -0.5rem 0 1.5rem;
+  color: #ccc;
+  font-size: 0.85rem;
+}
 .posttitle {
   text-transform: none;
   font-size: 1.5em;
