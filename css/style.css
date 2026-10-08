@@ -738,13 +738,13 @@ body {
 }
 #header-post {
   position: fixed;
-  top: 1rem;
-  left: 50%;
-  width: calc(100% - 4rem);
-  max-width: 60rem;
-  transform: translateX(-50%);
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 0.5rem 2rem;
+  border-bottom: 1px dotted rgba(144,141,141,0.35);
+  background: #1d1f21;
   z-index: 100;
-  pointer-events: none;
 }
 #header-post a {
   background: none;
@@ -773,11 +773,10 @@ body {
 #header-post .post-navigation {
   display: flex;
   align-items: center;
-  width: max-content;
+  justify-content: flex-end;
+  max-width: 60rem;
   min-height: 32px;
-  margin-left: auto;
-  background: #1d1f21;
-  pointer-events: auto;
+  margin: 0 auto;
 }
 #header-post #nav {
   color: #2bbc8a;
