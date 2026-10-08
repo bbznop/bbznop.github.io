@@ -908,6 +908,9 @@ body {
 }
 #footer-post #toc-footer {
   clear: both;
+  max-height: 60vh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
   padding-top: 1rem;
   padding-bottom: 1rem;
   background: #323539;
@@ -955,6 +958,10 @@ body {
 }
 #footer-post #toc-footer .toc-number {
   display: none;
+}
+#footer-post #toc-footer .toc-link[aria-current="location"] {
+  color: #2bbc8a;
+  font-weight: bold;
 }
 @media screen and (min-width: 501px) {
   #footer-post-container {
@@ -1256,6 +1263,10 @@ article .content .caption {
 .article-toc .toc-number {
   display: none;
 }
+.article-toc .toc-link[aria-current="location"] {
+  color: #2bbc8a;
+  font-weight: bold;
+}
 @media screen and (min-width: 1200px) {
   article.post:has(> .article-toc) {
     display: grid;
@@ -1282,6 +1293,7 @@ article .content .caption {
     border-left: 1px dotted #908d8d;
     max-height: calc(100vh - 7rem);
     overflow: auto;
+    overscroll-behavior: contain;
   }
 }
 @media print {
